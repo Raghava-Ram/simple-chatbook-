@@ -66,4 +66,4 @@ class chatbook:
         self.menu()
 
 # Create an instance of the chatbook class to start the program
-user1 = chatbook()
+#user1 = chatbook()
