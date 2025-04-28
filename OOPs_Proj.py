@@ -19,9 +19,9 @@ class chatbook:
         elif opt == '2':
             self.signin()
         elif opt == '3':
-            pass
+            self.post_idea()
         elif opt == '4':
-            pass
+            self.message_friend()
         else:
             print("Exiting the chatbook. Thank you!")
             exit()
@@ -48,5 +48,22 @@ class chatbook:
         
         self.menu()
 
+    def post_idea(self):
+        if self.login_status:
+            idea = input("Please enter your idea: ")
+            print(f"Idea posted: {idea}")
+        else:
+            print("You need to sign in first.")
+        self.menu()
 
+    def message_friend(self):
+        if self.login_status:
+            friend = input("Enter friend's username: ")
+            message = input("Enter your message: ")
+            print(f"Message sent to {friend}: {message}")
+        else:
+            print("You need to sign in first.")
+        self.menu()
+
+# Create an instance of the chatbook class to start the program
 user1 = chatbook()
